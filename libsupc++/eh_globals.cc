@@ -42,6 +42,7 @@ extern "C" void free(void *);
 
 using namespace __cxxabiv1;
 
+#undef _GLIBCXX_HAVE_TLS
 #if _GLIBCXX_HAVE_TLS
 
 namespace
