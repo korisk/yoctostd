@@ -1,4 +1,5 @@
 CPPFLAGS=-fno-builtin -fno-stack-protector -mcmodel=kernel -fno-pic
+CPPFLAGS=-O0 -ggdb
 
 #exceptions
 ADDENDUM=functexcept.cc stdexcept.cc strings.cc

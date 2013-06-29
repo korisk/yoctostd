@@ -19,9 +19,9 @@ public:
 
 
 int foo(int a){
-	if(a == 3)
+	if(a == 1)
 		throw B();
-	if(a == 1){
+	if(a == 3){
 		throw a;
 	}
 

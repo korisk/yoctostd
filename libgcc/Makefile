@@ -5,7 +5,7 @@ CFLAGS+=-W -Wall -Wno-narrowing -Wwrite-strings -Wcast-qual -Wstrict-prototypes 
 
 CFLAGS+=-mcmodel=kernel
 
-CFLAGS+=-MD -fno-pic
+CFLAGS+=-MD -fno-pic -O0 -ggdb
 
 OBJS=unwind-dw2.o unwind-dw2-fde-dip.o unwind-sjlj.o unwind-c.o
 

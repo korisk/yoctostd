@@ -1,5 +1,6 @@
 
-OBJS=level1.o level2.o addendum.o ylibc.o
+OBJS=level1.o level2.o addendum.o
+# ylibc.o
 
 all:libsubstd.o
 
@@ -16,8 +17,12 @@ ylibc.o:
 libsubstd.o: ${OBJS}
 	gcc -Wl,-r -fno-pic  $(OBJS) -o libsubstd.o -nostdlib
 
+test:
+	g++ -nodefaultlibs -lc libsubstd.o -ggdb -O0 -Wl,-verbose ./test.cc -o ./test
+
 clean:
 	rm ${OBJS} libsubstd.o
+	rm -f ./test
 	$(MAKE) -C libgcc	clean
 	$(MAKE) -C libsupc++	clean
 	$(MAKE) -C addendum	clean

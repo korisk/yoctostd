@@ -1,5 +1,5 @@
 CPPFLAGS=-I./libgcc/include -fno-builtin -fno-stack-protector -mcmodel=kernel -fno-pic
-CPPFLAGS+=-MD
+CPPFLAGS+=-MD -O0 -ggdb
 
 #exceptions
 LVL2=eh_throw.cc eh_alloc.cc eh_catch.cc eh_globals.cc eh_terminate.cc eh_unex_handler.cc eh_term_handler.cc \
